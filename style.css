@@ -1,0 +1,30 @@
+body {
+    background-color: #fff;
+    font-family: Monospace, Sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .codeSnippet {
+    padding: 25px;
+    background-color: #EEE;
+  }
+  
+  span {
+    background-color: #EEE;
+  }
+  
+  .notation {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  table, 
+  th, 
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
