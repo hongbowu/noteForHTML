@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>HTML Tags</title>
 </head>
 <body>
-    
+    <h1>HTML Tags I Learned</h1>
+    <main>
+      <section id='content'>
+        <ul>
+          <li><a href='#syntax'>HTML TAGS SYNTAX</a></li>
+          <li><a href='#selfClosing'>SELFCLOSING TAGS</a></li>
+          <li><a href='#forms'>FORM TAGS</a></li>
+          <li><a href='#tableTags'>TABLE TAGS</a></li>
+        </ul>
+      </section>
+      <article id='syntax'>
+        <h2>HTML Tags Syntax: </h2>
+        <div class='codeSnippet'>
+          <p> &lt;element-name&gt;Content&lt;/element-name&gt;</p>
+        </div>
+        <p>A single tag is made of an opening angle bracket &lt;, followed by the element-name, followed by the closing angle bracket &gt;. </p>
+      </article>
+      <article id='selfClosing'>
+        <h2>Self Closing Tags:</h2>
+        <div class='codeSnippet'>
+          <p>&lt;self-closing-element-tag /&gt;</p>
+        </div>
+        <p> While most elements are made of opening and closing tags some are self-closing. Furthermore, some self-closing elements like <span>&lt;br&gt;</span> can have a slash at the end like so: <span>&lt;br&gt;</span>. The other self-closing tags include: <span>&lt;area&gt;, &lt;base&gt;, &lt;col&gt;, &lt;embed&gt;, &lt;hr&gt;, &lt;img&gt;, &lt;input&gt;, &lt;keygen&gt;, &lt;link&gt;, &lt;meta&gt;, &lt;param&gt;, &lt;source&gt;, &lt;track&gt;, and &lt;wbr&gt;</span>.</p>
+      </article>
+      <article id='forms'>
+        <h2>Form Tags:</h2>
+        <p>In HTML, forms are used for gathering and sending user input to an external source (like a server) for processing. This is done with the &lt;form&gt; element, which contains various labels and inputs.</p>
+        <div class='codeSnippet'>
+          <p>
+            &lt;form&gt;<br>
+            &ensp;&lt;!-- Form elements --&gt;<br>
+            &lt;/form&gt;
+          </p>
+        </div>
+        <p>The following is an example of an HTML form that features &lt;input&gt; elements:</p>
+        <div class='codeSnippet'>
+          <p>
+            &lt;!DOCTYPE html&gt;<br>
+            &ensp;&lt;html&gt;<br>
+            &ensp;&ensp;&lt;head&gt; &lt;/head&gt;<br>
+            &ensp;&ensp;&lt;body&gt;<br>
+            &ensp;&ensp;&ensp;&lt;form method="post" action="http://server1"&gt;<br>
+            &ensp;&ensp;&ensp;&ensp;Enter your name:<br>
+            &ensp;&ensp;&ensp;&ensp;&lt;input type="text" name="fname" /&gt;<br>
+            &ensp;&ensp;&ensp;&ensp;&lt;br /&gt;<br>
+
+            &ensp;&ensp;&ensp;&ensp;Enter your age:<br>
+            &ensp;&ensp;&ensp;&ensp;&lt;input type="text" name="age" /&gt;<br>
+            &ensp;&ensp;&ensp;&ensp;&lt;br /&gt;<br>
+
+            &ensp;&ensp;&ensp;&ensp;&lt;input type="submit" value="Submit" /&gt;<br>
+            &ensp;&ensp;&ensp;&lt;/form&gt;<br>
+            &ensp;&ensp;&lt;/body&gt;<br>
+            &ensp;&lt;/html&gt;
+          </p>
+        </div>
+        <p>The rendered output of above looks like this:</p>
+        <img src="https://raw.githubusercontent.com/Codecademy/docs/main/media/html-form-code-output.png" alt="Rendered output of above snippet" >
+      </article>
+      <article id='tableTags'>
+        <h2>Table Tags:</h2>
+        <div class='codeSnippet'>
+          <pre>
+&lt;table&gt;  <span class='notation'>//table: Defines an HTML table.</span>
+  &lt;thead&gt; <span class='notation'>//thead: Groups the header content in a table.</span>
+    &lt;tr&gt; <span class='notation'>//tr: Defines a row in a table.</span>
+      &lt;th&gt;heading 1&lt;/th&gt; <span class='notation'>//th: Defines a header cell in a table.</span>
+      &lt;th&gt;heading 2&lt;/th&gt;
+      &lt;th&gt;heading 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt; <span class='notation'>//tbody: Groups the body content in a table.</span>
+    &lt;tr&gt;
+      &lt;td&gt;cell 1&lt;/td&gt; <span class='notation'>//td: Defines a cell in a table that contains data.</span>
+      &lt;td rowspan='2'&gt;cell 2&lt;/td&gt;
+      <span class='notation'>// rowspan: Specifies the number of rows a cell should span.</span>
+      &lt;td&gt;cell 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cell 1&lt;/td&gt;
+      &lt;td&gt;cell 3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cell 1&lt;/td&gt;
+      &lt;td colspan='2'&gt;cell 2+3&lt;/td&gt;
+    &lt;/tr&gt;  <span class='notation'>//colspan: Specifies the number of columns a cell should span.</span>
+  &lt;/tbody&gt;
+  &lt;tfoot&gt; <span class='notation'>//tfoot: Groups the footer content in a table.</span>
+    &lt;tr&gt;
+      &lt;td&gt;foot 1&lt;/td&gt;
+      &lt;td&gt;foot 2&lt;/td&gt;
+      &lt;td&gt;foot 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+          </pre>
+        </div>
+        <p>The above code block shows the HTML markup for a simple table structure. Its output is as follows:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>heading 1</th>
+              <th>heading 2</th>
+              <th>heading 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>cell 1</td>
+              <td rowspan='2'>cell 2</td>
+              <td>cell 3</td>
+            </tr>
+            <tr>
+              <td>cell 1</td>
+              <td>cell 3</td>
+            </tr>
+            <tr>
+              <td>cell 1</td>
+              <td colspan='2'>cell 2+3</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>foot 1</td>
+              <td>foot 2</td>
+              <td>foot 3</td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+    </main>
 </body>
 </html>
